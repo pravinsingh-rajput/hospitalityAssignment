@@ -6,35 +6,35 @@ export interface HospitalityExperience {
   role: string;
   location: string;
   duration: string;
-  project: Projcet[];
+  projects: Project[];
 }
 
-export interface Projcet {
+export interface Project {
   id: string;
   title: string;
   overview: string;
-  launchDate: string;
-  tool: string[];
-  metrics: Record<string, any>;
-  imageUrl?: string;
-  initiatives?: Initiatives[];
+  launchDate?: string;
+  tools?: string[];
+  metrics?: Record<string, any>;
+  initiatives?: Initiative[];
   guestFeedback?: number[];
-  modules?: Module;
-  team?: Team[];
+  modules?: Record<string, Module>;
+  team?: TeamMember[];
+  imageUrl?: string;
   documentLinks?: string[];
 }
 
-export interface Initiatives {
+export interface Initiative {
   name: string;
   result: string;
 }
 
 export interface Module {
   summary: string;
-  tags: string[];
+  tags?: string[];
 }
 
-export interface Team {
+export interface TeamMember {
   name: string;
   role: string;
   lead: boolean;
